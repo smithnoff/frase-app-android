@@ -4,6 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity_login_user">
+    tools:context=".activity_login_user"
+    android:background="@color/black">
+
+    <TextView
+        android:id="@+id/tx_titulo"
+        android:layout_width="302dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/roboto"
+        android:text="FraseApp"
+        android:textAlignment="center"
+        android:textColor="#C1C1C1"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
