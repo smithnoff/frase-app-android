@@ -13,6 +13,13 @@
         android:theme="@style/Theme.FraseApp_4"
         tools:targetApi="31">
         <activity
+            android:name=".activity_login_user"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".LoginFaseApp"
             android:exported="false">
             <meta-data
