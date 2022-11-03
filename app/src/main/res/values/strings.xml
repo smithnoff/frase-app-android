@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">FraseApp_4</string>
-    <string name="required" />
-    <string name="email" />
+    <string name="required">Required</string>
+    <string name="email">Email</string>
+    <string name="Email">Email</string>
+    <string name="Required">Required</string>
+    <string name="Password">Password</string>
+    <string name="FraseApp">FraseApp</string>
 </resources>
