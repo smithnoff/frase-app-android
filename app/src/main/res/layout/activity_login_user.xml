@@ -24,8 +24,11 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/emailContainer"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:theme="@style/Theme.containers"
+        app:helperTextEnabled="true"
         app:helperText="@string/Required"
         app:helperTextTextColor="#E81306"
+        app:errorEnabled="true"
         android:layout_width="354dp"
         android:layout_height="73dp"
         android:layout_marginStart="20dp"
@@ -59,6 +62,9 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/passwordContainer"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:theme="@style/Theme.containers"
+        app:errorEnabled="true"
+        app:errorIconDrawable="@null"
         app:helperText="@string/Required"
         app:helperTextTextColor="#E81306"
         android:layout_width="354dp"
@@ -72,6 +78,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:textColorHint="@color/white"
+        app:counterOverflowTextColor="@color/white"
+        app:hintTextColor="@color/white"
+        app:counterTextColor="@color/white"
+        android:outlineAmbientShadowColor="@color/white"
+        android:outlineSpotShadowColor="@color/white"
         app:layout_constraintTop_toBottomOf="@+id/emailContainer">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -82,7 +93,65 @@
             android:inputType="textPassword"
             android:maxLength="16"
             android:lines="1"
-            android:textColorHint="@color/white"></com.google.android.material.textfield.TextInputEditText>
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:textColorHighlight="@color/white"
+            android:shadowColor="@color/white"
+            android:textColorLink="@color/white"></com.google.android.material.textfield.TextInputEditText>
     </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/butLogin"
+        android:layout_width="345dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="60dp"
+        android:background="#FDAF01"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Log in"
+        android:textColor="@color/white"
+        android:theme="@style/Theme.botones"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordContainer" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="55dp"
+        android:text="Forgot your password?"
+        android:textColor="#C1C1C1"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/butLogin" />
+
+    <TextView
+        android:id="@+id/txt_olvido_contr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Dont have an account ?"
+        android:textColor="#FDAF01"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/txt_register"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/txt_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="50dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Register here"
+        android:textColor="#FDAF01"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
