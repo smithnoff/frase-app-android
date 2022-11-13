@@ -1,5 +1,6 @@
 package com.example.fraseapp_4
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.ContactsContract.CommonDataKinds.Email
@@ -42,6 +43,8 @@ class LoginUser : AppCompatActivity() {
             return
         }
         Toast.makeText(this,"Success",Toast.LENGTH_SHORT).show()
+        startActivity(Intent(this,MenuActivity:: class.java))
+        finish()
     }
 
     private fun validateEmail() : Boolean{
