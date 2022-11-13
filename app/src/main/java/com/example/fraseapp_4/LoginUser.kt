@@ -11,6 +11,7 @@ import com.example.fraseapp_4.databinding.ActivityLoginUserBinding
 import com.example.fraseapp_4.databinding.ActivityMainBinding
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
+import java.util.regex.Pattern
 
 class LoginUser : AppCompatActivity() {
 
@@ -26,7 +27,7 @@ class LoginUser : AppCompatActivity() {
         binding = ActivityLoginUserBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.butLogin.setOnClickListener{validateEmail()}
+        binding.butLogin.setOnClickListener{validate()}
 
       //  textEmail = findViewById(R.id.emailEditText)
         // textPassword = findViewById(R.id.passwordEditText)
@@ -35,7 +36,7 @@ class LoginUser : AppCompatActivity() {
     }
 
     private fun validate(){
-        val result = arrayOf(validateEmail())
+        val result = arrayOf(validateEmail(),validatePassword())
 
         if (false in result){
             return
@@ -57,5 +58,26 @@ class LoginUser : AppCompatActivity() {
         }
     }
 
+    private fun validatePassword() : Boolean{
+        val password = binding.passwordEditText?.text.toString()
+        val passwordRegex = Pattern.compile(
+            "^"+
+                    "(?=.*[0-9])"+ //Al menos un dígito
+                    ".{8,}" +  //Al menos 8 caracteres
+                    "$"
+
+        )
+                return if (password.isEmpty()){
+                    binding.passwordContainer.error="Field can not be empty"
+                    false
+                }else if(!passwordRegex.matcher(password).matches()){
+                    binding.passwordContainer.error="Password is too weak"
+                    false
+                }else{
+                    binding.passwordContainer.error= null
+                    true
+                }
+
+    }
 
 }
