@@ -4,6 +4,130 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity">
+    tools:context=".RegisterActivity"
+    android:background="@color/black">
+
+    <TextView
+        android:id="@+id/tx_titulo"
+        android:layout_width="302dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/FraseApp"
+        android:textAlignment="center"
+        android:textColor="#C1C1C1"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailRegisterContainer"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:hint="@string/Email"
+        android:theme="@style/Theme.containers"
+        app:errorEnabled="true"
+        app:errorIconDrawable="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tx_titulo"
+        app:hintTextColor="@color/white"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailRegisterEditText"
+            android:layout_width="match_parent"
+            android:theme="@style/Theme.containers"
+            android:layout_height="60dp"
+            android:inputType="textEmailAddress"
+            android:lines="1"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="135dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordRegisterContainer"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="@string/Password"
+        android:theme="@style/Theme.containers"
+        app:errorEnabled="true"
+        app:errorIconDrawable="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailRegisterContainer"
+        app:hintTextColor="@color/white"
+        app:passwordToggleEnabled="true"
+        app:counterEnabled="true"
+        app:counterMaxLength="16"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password1RegisterEditText"
+            android:layout_width="match_parent"
+            android:theme="@style/Theme.containers"
+            android:layout_height="60dp"
+            android:inputType="textPassword"
+            android:lines="1"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="135dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password2RegisterContainer"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="@string/RepeatPassword"
+        android:theme="@style/Theme.containers"
+        app:errorEnabled="true"
+        app:errorIconDrawable="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordRegisterContainer"
+        app:hintTextColor="@color/white"
+        app:passwordToggleEnabled="true"
+        app:counterEnabled="true"
+        app:counterMaxLength="16"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password2RegisterEditText"
+            android:layout_width="match_parent"
+            android:theme="@style/Theme.containers"
+            android:layout_height="60dp"
+            android:inputType="textPassword"
+            android:lines="1"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="135dp"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/butRegirter"
+        android:layout_width="345dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="60dp"
+        android:background="#FDAF01"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Register"
+        android:textColor="@color/white"
+        android:theme="@style/Theme.botones"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password2RegisterContainer" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

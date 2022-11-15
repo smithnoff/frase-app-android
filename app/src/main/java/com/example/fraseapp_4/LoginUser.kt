@@ -30,6 +30,9 @@ class LoginUser : AppCompatActivity() {
 
         binding.butLogin.setOnClickListener{validate()}
 
+        binding.txtRegister.setOnClickListener { startActivity(Intent(this,RegisterActivity:: class.java))
+             }
+
       //  textEmail = findViewById(R.id.emailEditText)
         // textPassword = findViewById(R.id.passwordEditText)
         // containerTextEmail = findViewById(R.id.emailContainer)

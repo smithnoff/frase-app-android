@@ -6,4 +6,5 @@
     <string name="Required">Required</string>
     <string name="Password">Password</string>
     <string name="FraseApp">FraseApp</string>
+    <string name="RepeatPassword">Repeat Password</string>
 </resources>

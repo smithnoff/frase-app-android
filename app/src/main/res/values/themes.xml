@@ -30,7 +30,16 @@
         <item name="colorSecondary">@color/white</item>
         <item name="colorOnSecondary">@color/white</item>
         <item name="errorTextColor">#E81306</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="counterOverflowTextColor">@color/white</item>
+        <item name="hintTextColor">@color/white</item>
+        <item name="counterTextColor">@color/white</item>
 
+
+
+    </style>
+
+    <style name="Theme.registerUsser" parent="Theme.MaterialComponents">
     </style>
 
 </resources>
